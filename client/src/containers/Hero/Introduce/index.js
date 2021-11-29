@@ -19,8 +19,12 @@ const HeroIntro = () => {
             cùng các bạn với mục tiêu đạt kết quả cao nhất trong các kỳ thi.
           </Description>
           <PurchaseButton
-            title="Start learning"
-            subtitle="120+ hours of video"
+            title="Bắt đầu học online"
+            subtitle="120+ giờ học trực tuyến"
+          />
+          <PurchaseButton
+            title="Đăng ký học offline"
+            subtitle="Học trực tiếp tại các lớp"
           />
         </TextWrapper>
         {/* <MockupAnimation /> */}

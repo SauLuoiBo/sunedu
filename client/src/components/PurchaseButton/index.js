@@ -5,22 +5,31 @@ import styled from "styled-components";
 export default function PurchaseButton(props) {
   const { title, subtitle } = props;
   return (
-    <Link href="/page-2">
-      <Wrapper>
-        <IconWrapper>
-          <Icon src="./icons/credit.svg" className="icon" />
-          <Ring src="./icons/icon-ring.svg" />
-        </IconWrapper>
-        <TextWrapper>
-          <Title>{title || "Get Pro Access"}</Title>
-          <Subtitle>{subtitle || "$19 per month"}</Subtitle>
-        </TextWrapper>
-      </Wrapper>
-    </Link>
+    <Container>
+      <Link href="/page-2">
+        <Wrapper>
+          <IconWrapper>
+            <Icon src="./icons/credit.svg" className="icon" />
+            <Ring src="./icons/icon-ring.svg" />
+          </IconWrapper>
+          <TextWrapper>
+            <Title>{title || "Get Pro Access"}</Title>
+            <Subtitle>{subtitle || "$19 per month"}</Subtitle>
+          </TextWrapper>
+        </Wrapper>
+      </Link>
+    </Container>
   );
 }
 
+const Container = styled.div`
+  :hover {
+    transform: translateY(-5px);
+  }
+`;
+
 const Wrapper = styled.div`
+  position: relative;
   width: 280px;
   height: 77px;
   padding: 12px;
@@ -35,10 +44,10 @@ const Wrapper = styled.div`
   gap: 20px;
   cursor: pointer;
 
-  /* *,
+  *,
   & {
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  } */
+  }
 
   :hover {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
