@@ -10,6 +10,7 @@ import {
   WrapperInner,
 } from "./styles/styles";
 import { Button } from "../../components";
+import { HeroIntro } from "../Hero";
 
 const Introduce = () => {
   return (
@@ -20,9 +21,9 @@ const Introduce = () => {
       <BackgroundWave2 />
       <BackgroundBlur />
       <WrapperInner className="container">
-        <Button.Link link="/ko" text="ha" />
-        <Button link="/ko" text="ha" />
-        <Button link="/ko" text="ha" />
+        <View>
+          <HeroIntro />
+        </View>
       </WrapperInner>
     </Wrapper>
   );
