@@ -1,5 +1,5 @@
 import Layout from "./layouts";
 import Header from "./Header";
-import Introduction from "./introduction";
+import Introduce from "./Introduce";
 
-export { Layout, Header, Introduction };
+export { Layout, Header, Introduce };
