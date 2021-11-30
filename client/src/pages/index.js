@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Button } from "../components";
-import { Introduce, Introduction } from "../containers";
-import Huhu from "../containers/huhu/Huhu";
+import { Introduce, Introduction, Tutorials } from "../containers";
 
 export default function Home() {
   return (
@@ -13,6 +12,7 @@ export default function Home() {
       </Head>
       <main>
         <Introduce />
+        <Tutorials />
       </main>
     </>
   );

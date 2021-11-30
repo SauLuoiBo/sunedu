@@ -44,8 +44,8 @@ export default createGlobalStyle`
     text-decoration: none;
     text-transform: capitalize;
     transition: all .2s linear;
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -55,6 +55,12 @@ export default createGlobalStyle`
 
       @media ${(props) => props.theme.breakpoints.lg} {
         padding: 0 10rem;
+    }
+    @media ${(props) => props.theme.breakpoints.md} {
+        padding: 0 5rem;
+    }
+    @media ${(props) => props.theme.breakpoints.sm} {
+        padding: 0 1rem;
     }
     }
   }

@@ -52,3 +52,50 @@ export const Kaaa = styled.div`
     background-color: red;
   }
 `;
+
+export const WrapperTwo = styled.button`
+  display: flex;
+  background: linear-gradient(
+    rgba(24, 32, 79, 0.4) 0%,
+    rgba(24, 32, 79, 0.4) 100%
+  );
+  box-shadow: rgb(0 0 0 / 15%) 0px 20px 40px,
+    rgb(0 0 0 / 20%) 0px 0px 0px 0.5px inset;
+  border-radius: 30px;
+  border: none;
+  padding: 10px 30px 10px 12px;
+  cursor: pointer;
+  width: fit-content;
+
+  img {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+  }
+
+  p {
+    font-style: normal;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 130%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: auto auto auto 8px;
+  }
+
+  :hover {
+    background: linear-gradient(
+      rgba(24, 32, 79, 0.4) 0%,
+      rgba(24, 32, 79, 0.6) 70%
+    );
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1),
+      inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    p {
+      transform: translate(0px, -1px);
+    }
+    img {
+      transform: scale(1.1);
+    }
+  }
+`;
