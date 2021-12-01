@@ -1,8 +1,17 @@
 import Head from "next/head";
+import React from "react";
 import { Button } from "../components";
-import { Introduce, Introduction, Tutorials } from "../containers";
+import Video from "../components/Video";
+import {
+  CreateProfile,
+  Introduce,
+  Introduction,
+  Tutorials,
+} from "../containers";
 
 export default function Home() {
+  const [hi, setHi] = React.useState(null);
+
   return (
     <>
       <Head>
@@ -13,6 +22,24 @@ export default function Home() {
       <main>
         <Introduce />
         <Tutorials />
+        <CreateProfile />
+        <div
+          onClick={() =>
+            setHi(`<iframe
+        width="640"
+        height="360"
+        src="https://short.ink/w2TOj0y6E"
+        frameborder="0"
+        scrolling="0"
+        allowfullscreen
+      ></iframe>`)
+          }
+        >
+          {" "}
+          hihiihi
+        </div>
+        <div dangerouslySetInnerHTML={{ __html: hi }}></div>
+        <div>{hi}</div>
       </main>
     </>
   );
