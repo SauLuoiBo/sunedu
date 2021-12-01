@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import { Button } from "../components";
-import Video from "../components/Video";
+
 import {
   CreateProfile,
   Introduce,
