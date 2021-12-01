@@ -10,8 +10,6 @@ import {
 } from "../containers";
 
 export default function Home() {
-  const [hi, setHi] = React.useState(null);
-
   return (
     <>
       <Head>
@@ -23,23 +21,16 @@ export default function Home() {
         <Introduce />
         <Tutorials />
         <CreateProfile />
-        <div
-          onClick={() =>
-            setHi(`<iframe
-        width="640"
-        height="360"
-        src="https://short.ink/w2TOj0y6E"
-        frameborder="0"
-        scrolling="0"
-        allowfullscreen
-      ></iframe>`)
-          }
-        >
-          {" "}
-          hihiihi
+        <div>
+          <iframe
+            width="640"
+            height="360"
+            src="https://short.ink/w2TOj0y6E"
+            frameborder="0"
+            scrolling="0"
+            allowfullscreen
+          ></iframe>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: hi }}></div>
-        <div>{hi}</div>
       </main>
     </>
   );
