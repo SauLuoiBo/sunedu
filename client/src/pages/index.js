@@ -28,7 +28,7 @@ export default function Home() {
             src="https://short.ink/w2TOj0y6E"
             frameBorder="0"
             scrolling="0"
-            allowFullscreen
+            allowFullScreen
           ></iframe>
         </div>
       </main>
