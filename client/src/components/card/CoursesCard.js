@@ -18,7 +18,7 @@ const CoursesCard = (props) => {
       </BackgroundWrapper>
       <ContentWrapper>
         <Text.BodyIntro line={3}>{title || "Title"}</Text.BodyIntro>
-        <Text.Caption>
+        <Text.Caption theme={true}>
           {videos || 1} videos - {hour || 1} giờ học
         </Text.Caption>
         <Favorite>

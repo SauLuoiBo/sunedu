@@ -68,7 +68,7 @@ const Footer = () => {
           ))}
         </LinkWrapper>
         <CreditWrapper>
-          <Text>
+          <Text theme={false}>
             Site made with React, Gatsby, Netlify and Contentful. Learn how.
           </Text>
           <Text>Design+Code © 2021</Text>
@@ -93,7 +93,7 @@ const Footer = () => {
 export default Footer;
 
 const Wrapper = styled.footer`
-  background-color: blue;
+  background-color: rgb(30, 19, 87);
   position: relative;
   width: 100%;
   /* height: 640px; */

@@ -29,14 +29,33 @@ export const Wrapper = styled.div`
   }
 `;
 
+export const WrapperTwo = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+
+  .child-1 {
+    display: flex;
+    width: 100%;
+    padding: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .child-2 {
+    width: 100%;
+  }
+`;
+
 export const ContentWrapper = styled.div`
   max-width: 40rem;
   /* margin: 0 auto; */
   /* padding: 200px 30px; */
   display: flex;
   justify-content: start;
-  align-items: flex-start;
+  align-items: ${(props) => (props.textAlign ? "center" : "flex-start")};
   flex-direction: column;
+  text-align: ${(props) => (props.textAlign ? "center" : null)};
   gap: 2rem;
 
   h5 {

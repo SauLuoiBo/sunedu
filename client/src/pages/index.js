@@ -1,7 +1,12 @@
 import Head from "next/head";
 import React from "react";
 
-import { CreateProfile, Introduce, Tutorials } from "../containers";
+import {
+  CreateProfile,
+  Introduce,
+  IntroStories,
+  Tutorials,
+} from "../containers";
 import IntroCourse from "../containers/IntroCourse";
 
 export default function Home() {
@@ -16,6 +21,7 @@ export default function Home() {
       <IntroCourse />
       <Tutorials />
       <CreateProfile />
+      <IntroStories />
       {/* <div>
         <iframe
           width="640"

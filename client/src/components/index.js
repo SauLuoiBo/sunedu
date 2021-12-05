@@ -6,6 +6,7 @@ import CertificateCard from "./card/CertificateCard";
 import Subject from "./Subject/Subject";
 import CoursesCard from "./card/CoursesCard";
 import ButtonRound from "./buttonRound";
+import StoryCard from "./card/StoryCard";
 
 export {
   Button,
@@ -16,4 +17,5 @@ export {
   Subject,
   CoursesCard,
   ButtonRound,
+  StoryCard,
 };
