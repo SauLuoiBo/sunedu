@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "..";
+import { Footer, Header } from "..";
 import CertificateCard from "../../components/card/CertificateCard";
 
 const Layout = ({ children }) => {
@@ -7,14 +7,7 @@ const Layout = ({ children }) => {
     <>
       <Header />
       <main>{children}</main>
-      <footer>
-        <CertificateCard />
-        <CertificateCard
-          title="học viên lý"
-          colorOne="rgba(51, 168, 253, 0.2)"
-          colorTwo="rgba(76, 0, 200, 0.2) "
-        />
-      </footer>
+      <Footer />
     </>
   );
 };

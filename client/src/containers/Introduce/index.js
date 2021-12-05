@@ -16,13 +16,17 @@ const Introduce = () => {
   return (
     <Wrapper>
       <Background />
-
       <BackgroundWave1 />
       <BackgroundWave2 />
       <BackgroundBlur />
       <WrapperInner className="container">
         <View>
-          <HeroIntro />
+          <View.Child_1>
+            <HeroIntro />
+          </View.Child_1>
+          <View.Child_2>
+            <p>adshsadk</p>
+          </View.Child_2>
         </View>
       </WrapperInner>
     </Wrapper>

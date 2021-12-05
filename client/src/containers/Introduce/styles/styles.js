@@ -21,7 +21,7 @@ export const WrapperInner = styled.div`
 export const BackgroundBlur = styled.div`
   position: absolute;
   width: 100%;
-  height: 800px;
+  height: 600px;
   backdrop-filter: blur(60px);
   top: 0;
 `;
@@ -47,7 +47,7 @@ export const BackgroundWave1 = styled.div`
   background-repeat: no-repeat;
   background-size: 100%;
   top: 137px;
-  height: 900px;
+  height: 500px;
   background-image: url("./background/hero-wave1.svg");
   /* top: -15rem; */
   backdrop-filter: blur(60px);

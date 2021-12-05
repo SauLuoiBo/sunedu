@@ -19,4 +19,8 @@ export const Navbar = styled.nav`
   justify-content: space-between;
   align-content: center;
   gap: 2rem;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    display: none;
+  }
 `;

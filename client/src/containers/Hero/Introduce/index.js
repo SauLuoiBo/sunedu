@@ -4,7 +4,7 @@ import { PurchaseButton } from "../../../components";
 
 const HeroIntro = () => {
   return (
-    <Wrapper>
+    <Wrapper className="child-2">
       {/* <WaveBackground /> */}
       <ContentWrapper>
         <TextWrapper>

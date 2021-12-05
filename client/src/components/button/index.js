@@ -1,11 +1,12 @@
 import React from "react";
 import { Wrapper, WrapperTwo } from "./styles/button";
 import Link from "next/link";
+import styled from "styled-components";
 
 const Button = (props) => {
-  const { icon, text } = props;
+  const { icon, text, width } = props;
   return (
-    <Wrapper>
+    <Wrapper width={width}>
       {icon ? <img src={icon} /> : ""}
       {text ? <p>{text}</p> : null}
     </Wrapper>
@@ -13,10 +14,10 @@ const Button = (props) => {
 };
 
 Button.Link = function ButtonLink(props) {
-  const { icon, text, link } = props;
+  const { icon, text, link, width } = props;
   return (
     <Link href={link}>
-      <Wrapper>
+      <Wrapper width={width}>
         {icon ? <img src={icon} /> : null}
         {text ? <p>{text}</p> : null}
       </Wrapper>
@@ -48,4 +49,57 @@ Button.Menu = function ButtonMenu(props) {
   );
 };
 
+Button.Search = function ButtonSearch() {
+  return (
+    <SearchWrapper>
+      <label>
+        <SearchIcon>
+          <img src="./icons/menu/search.svg" />
+        </SearchIcon>
+        <input type="text" placeholder="Search" name="search" />
+      </label>
+    </SearchWrapper>
+  );
+};
+
 export default Button;
+
+const SearchWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 4.4rem;
+
+  input {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      rgba(99, 106, 150, 0.4) 0%,
+      rgba(182, 186, 214, 0.25) 100%
+    );
+    border: none;
+    border-radius: 30px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 20px 40px,
+      rgb(255 255 255 / 30%) 0px 0px 0px 0.5px inset;
+    box-sizing: border-box;
+    padding: 10px 42px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+    color: rgb(255, 255, 255);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+  }
+`;
+
+const SearchIcon = styled.div`
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+
+  img {
+    width: 24px;
+    height: 24px;
+    margin: 0px;
+  }
+`;

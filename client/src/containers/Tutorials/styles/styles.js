@@ -11,6 +11,9 @@ export const ContentWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 4rem;
+  width: 100%;
+  justify-content: space-between;
+
   /* margin: 0 auto; */
   /* align-items: center; */
   justify-content: center;
