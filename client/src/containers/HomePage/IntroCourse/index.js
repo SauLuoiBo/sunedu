@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, CoursesCard, Subject, View } from "../../components";
+import { Button, CoursesCard, Subject, View } from "../../../components";
 
 import styled from "styled-components";
 
@@ -9,6 +9,7 @@ const IntroCourse = () => {
       <View align="flex-end">
         <View.Child_1>
           <View.Title
+            themeText={true}
             title="Hơn 120 giờ học"
             des="Học các khoá học và làm bài tập tốt nhất"
             content="Chúng tôi tập trung vào các kiến thức hàng đầu để các em học sinh có thể chuẩn bị tốt kiến thức phổ thông của mình. Sau đó, chúng tôi dạy tất cả các kỹ năng làm bài thi để các em đạt kết quả tốt nhất."

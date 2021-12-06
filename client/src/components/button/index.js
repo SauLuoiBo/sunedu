@@ -2,6 +2,7 @@ import React from "react";
 import { Wrapper, WrapperTwo } from "./styles/button";
 import Link from "next/link";
 import styled from "styled-components";
+import { Text } from "../../styles";
 
 const Button = (props) => {
   const { icon, text, width } = props;
@@ -62,7 +63,38 @@ Button.Search = function ButtonSearch() {
   );
 };
 
+Button.Goto = function ButtonGoto(props) {
+  const { icon, text, link } = props;
+  return (
+    <Link href={link || "/"}>
+      <GotoWrapper>
+        <Text>{text || "text"}</Text>
+      </GotoWrapper>
+    </Link>
+  );
+};
+
 export default Button;
+
+const GotoWrapper = styled.div`
+  text-transform: uppercase;
+  padding: 8px 15px;
+  background: linear-gradient(
+    rgba(24, 32, 79, 0.4) 0%,
+    rgba(24, 32, 79, 0.4) 100%
+  );
+  box-shadow: rgb(0 0 0 / 15%) 0px 20px 40px,
+    rgb(0 0 0 / 20%) 0px 0px 0px 0.5px inset;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  :hover {
+    transform: translateY(-3px);
+  }
+`;
 
 const SearchWrapper = styled.div`
   position: relative;

@@ -1,10 +1,13 @@
 import React from "react";
-import { CustomerStories } from "../../containers";
+import PricingWave from "../../components/Wave/PricingWave";
+import { CustomerStories, Stories } from "../../containers/StoriesPage";
 
 const index = () => {
   return (
     <>
+      <PricingWave />
       <CustomerStories />
+      <Stories />
     </>
   );
 };

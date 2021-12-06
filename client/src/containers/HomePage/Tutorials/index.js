@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, HandbookCard, View } from "../../components";
+import { Button, HandbookCard, View } from "../../../components";
 import {
   ContentWrapper,
   HeroWrapper,

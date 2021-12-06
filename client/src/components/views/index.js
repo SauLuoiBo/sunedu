@@ -1,13 +1,14 @@
 import React from "react";
 import { Button } from "..";
+import { Text } from "../../styles";
 import { ContentWrapper, Wrapper, WrapperTwo } from "./styles/views";
 
 const View = ({ children, ...restProps }) => {
   return <Wrapper {...restProps}>{children}</Wrapper>;
 };
 
-View.Column = function ViewColumn({ children }) {
-  return <WrapperTwo className="child-1">{children}</WrapperTwo>;
+View.Column = function ViewColumn({ children, ...restProps }) {
+  return <WrapperTwo {...restProps}>{children}</WrapperTwo>;
 };
 
 View.Child_1 = function ViewChild_1({ children }) {
@@ -19,12 +20,15 @@ View.Child_2 = function ViewChild_2({ children }) {
 };
 
 View.Title = function ViewTitle(props) {
-  const { title, des, content, link, icon, button, textAlign } = props;
+  const { title, des, content, link, icon, button, textAlign, themeText } =
+    props;
   return (
     <ContentWrapper textAlign={textAlign}>
-      <h5>{title || "Title"}</h5>
-      <h3>{des || "description"}</h3>
-      <p>{content || "content"}</p>
+      <Text.Caption2 themeText={themeText}>{title || "Title"}</Text.Caption2>
+      <Text.Title themeText={themeText}>{des || "description"}</Text.Title>
+      <Text.BodyMain themeText={themeText}>
+        {content || "content"}
+      </Text.BodyMain>
 
       {button ? (
         <Button.Menu

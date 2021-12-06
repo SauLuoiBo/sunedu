@@ -33,6 +33,7 @@ export const WrapperTwo = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
+  grid-row-gap: ${(props) => props.rowGap};
 
   .child-1 {
     display: flex;

@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "../../components";
+import { View } from "../../../components";
 
 import {
   Background,
@@ -9,8 +9,7 @@ import {
   Wrapper,
   WrapperInner,
 } from "./styles/styles";
-import { Button } from "../../components";
-import { HeroIntro } from "../Hero";
+import { HeroIntro } from "../../Hero";
 
 const Introduce = () => {
   return (

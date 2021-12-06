@@ -9,12 +9,20 @@ Text.Caption = function Caption({ children, ...restProps }) {
   return <TextCaption {...restProps}>{children}</TextCaption>;
 };
 
+Text.Caption2 = function Caption2({ children, ...restProps }) {
+  return <TextCaption2 {...restProps}>{children}</TextCaption2>;
+};
+
 Text.Body = function TextBody({ children, ...restProps }) {
   return (
     <TextNormal weight={true} {...restProps}>
       {children}
     </TextNormal>
   );
+};
+
+Text.Title = function TextTitle({ children, ...restProps }) {
+  return <Title {...restProps}>{children}</Title>;
 };
 
 Text.Link = function TextLinkA(props) {
@@ -30,6 +38,14 @@ Text.BodyIntro = function TextBodyIntroH({ children, ...restProps }) {
   return <TextBodyIntro {...restProps}>{children}</TextBodyIntro>;
 };
 
+Text.BodyMain = function TextBodyMainP({ children, ...restProps }) {
+  return <BodyMain {...restProps}>{children}</BodyMain>;
+};
+
+Text.Medium = function TextMediumP({ children, ...restProps }) {
+  return <TextMedium {...restProps}>{children}</TextMedium>;
+};
+
 export default Text;
 
 const TextNormal = styled.p`
@@ -39,14 +55,36 @@ const TextNormal = styled.p`
   color: ${(props) => (props.themeText ? " " : "rgba(255, 255, 255, 0.7)")};
 `;
 
+const TextMedium = styled.p`
+  font-size: 1.5rem;
+  line-height: 130%;
+  font-weight: ${(props) => (props.weight ? "600" : "400")};
+  color: ${(props) => (props.themeText ? " " : "rgba(255, 255, 255, 0.7)")};
+`;
+
 const TextCaption = styled.p`
   font-size: 1.5rem;
   line-height: 1.8rem;
+  font-weight: 400;
+  color: ${(props) => (props.themeText ? "" : "rgba(255, 255, 255, 0.7)")};
+`;
+
+const TextCaption2 = styled.p`
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: ${(props) => (props.themeText ? "" : "rgba(255, 255, 255, 0.7)")};
+`;
+
+const BodyMain = styled.p`
+  font-size: 2rem;
+  line-height: 140%;
   color: ${(props) => (props.themeText ? "" : "rgba(255, 255, 255, 0.7)")};
 `;
 
 const TextLink = styled.a`
-  font-size: 13px;
+  font-size: 1.3rem;
   line-height: 130%;
   font-weight: 600;
   color: ${(props) => (props.themeText ? "" : "rgba(255, 255, 255, 0.7)")};
@@ -64,4 +102,10 @@ const TextBodyIntro = styled.h3`
   -webkit-line-clamp: ${(props) => props.line || null};
   -webkit-box-orient: vertical;
   overflow: hidden;
+`;
+
+const Title = styled.h1`
+  font-size: 4rem;
+  line-height: 120%;
+  color: ${(props) => (props.themeText ? "" : "rgba(255, 255, 255, 0.7)")};
 `;

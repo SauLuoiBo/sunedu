@@ -6,8 +6,8 @@ import {
   Introduce,
   IntroStories,
   Tutorials,
-} from "../containers";
-import IntroCourse from "../containers/IntroCourse";
+  IntroCourse,
+} from "../containers/HomePage";
 
 export default function Home() {
   return (
@@ -22,16 +22,6 @@ export default function Home() {
       <Tutorials />
       <CreateProfile />
       <IntroStories />
-      {/* <div>
-        <iframe
-          width="640"
-          height="360"
-          src="https://short.ink/w2TOj0y6E"
-          frameBorder="0"
-          scrolling="0"
-          allowFullScreen
-        ></iframe>
-      </div> */}
     </>
   );
 }

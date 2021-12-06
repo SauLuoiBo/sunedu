@@ -42,7 +42,7 @@ export default createGlobalStyle`
     line-height: 1.6;
     color: ${(props) => props.theme.colors.primary1};
     text-decoration: none;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     transition: all .2s linear;
     /* margin: 0;
     padding: 0; */
