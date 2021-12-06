@@ -45,7 +45,7 @@ const data = [
     text: "Trung tâm",
   },
   {
-    link: "/courses",
+    link: "/livestreams",
     icon: "./icons/menu/courses.svg",
     text: "Giấy phép",
   },
