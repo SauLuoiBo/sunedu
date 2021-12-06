@@ -73,5 +73,6 @@ const Wrapper = styled.div`
     }
     @media ${(props) => props.theme.breakpoints.sm} {
       -webkit-mask-box-image: none;
+    }
   }
 `;
