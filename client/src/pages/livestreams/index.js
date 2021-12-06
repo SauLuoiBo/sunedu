@@ -19,7 +19,7 @@ const index = () => {
           </View.Child_1>
           <View.Child_1>
             <View.Column rowGap="3rem">
-              <LivestreamCard />
+              <LivestreamCard lives={20} />
               <LivestreamCard />
               <LivestreamCard />
               <LivestreamCard />
