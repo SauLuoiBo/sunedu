@@ -18,7 +18,12 @@ const index = () => {
             />
           </View.Child_1>
           <View.Child_1>
-            <LivestreamCard />
+            <View.Column rowGap="3rem">
+              <LivestreamCard />
+              <LivestreamCard />
+              <LivestreamCard />
+              <LivestreamCard />
+            </View.Column>
           </View.Child_1>
         </View.Column>
       </Wrapper>
@@ -30,4 +35,13 @@ export default index;
 
 const Wrapper = styled.section`
   display: block;
+`;
+
+const LivestreamsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3rem;
+  justify-content: center;
+  align-content: center;
 `;

@@ -53,11 +53,15 @@ export default createGlobalStyle`
     .container{
       padding: 0 30rem;
 
+      @media ${(props) => props.theme.breakpoints.xl} {
+        padding: 0 15rem;
+    }
+
       @media ${(props) => props.theme.breakpoints.lg} {
-        padding: 0 20rem;
+        padding: 0 10rem;
     }
     @media ${(props) => props.theme.breakpoints.md} {
-        padding: 0 10rem;
+        padding: 0 5rem;
     }
     @media ${(props) => props.theme.breakpoints.sm} {
         padding: 0 1rem;

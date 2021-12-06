@@ -51,6 +51,8 @@ export default Text;
 const TextNormal = styled.p`
   font-size: 13px;
   line-height: 130%;
+  -webkit-line-clamp: ${(props) => props.line || null};
+  -webkit-box-orient: vertical;
   font-weight: ${(props) => (props.weight ? "600" : "400")};
   color: ${(props) => (props.themeText ? " " : "rgba(255, 255, 255, 0.7)")};
 `;
@@ -58,6 +60,10 @@ const TextNormal = styled.p`
 const TextMedium = styled.p`
   font-size: 1.5rem;
   line-height: 130%;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: ${(props) => props.line || null};
+  -webkit-box-orient: vertical;
   font-weight: ${(props) => (props.weight ? "600" : "400")};
   color: ${(props) => (props.themeText ? " " : "rgba(255, 255, 255, 0.7)")};
 `;
@@ -66,6 +72,11 @@ const TextCaption = styled.p`
   font-size: 1.5rem;
   line-height: 1.8rem;
   font-weight: 400;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: ${(props) => props.line || null};
+  -webkit-box-orient: vertical;
+  text-transform: uppercase;
   color: ${(props) => (props.themeText ? "" : "rgba(255, 255, 255, 0.7)")};
 `;
 
@@ -74,6 +85,10 @@ const TextCaption2 = styled.p`
   line-height: 1.8rem;
   text-transform: uppercase;
   font-weight: 600;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: ${(props) => props.line || null};
+  -webkit-box-orient: vertical;
   color: ${(props) => (props.themeText ? "" : "rgba(255, 255, 255, 0.7)")};
 `;
 
