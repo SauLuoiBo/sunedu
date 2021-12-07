@@ -14,8 +14,9 @@ const LivestreamCard = (props) => {
         <div className="content-livestreams">
           <SectionCard seen={true} />
           <SectionCard
-            name="My Design Process"
+            name="My Design Process sadsad sda dasd ads ads ads ads"
             des="Learn tips and tricks to create Ul assets."
+            min={100}
           />
           <SectionCard />
           <SectionCard />

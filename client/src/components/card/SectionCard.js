@@ -4,7 +4,7 @@ import { Text } from "../../styles";
 import Link from "next/link";
 
 const SectionCard = (props) => {
-  const { number, name, des, seen } = props;
+  const { number, name, des, seen, min, sec } = props;
   return (
     <Link href="/">
       <Wrapper>
@@ -13,9 +13,18 @@ const SectionCard = (props) => {
           {seen ? <img src="./icons/button/check.svg" /> : null}
         </div>
         <div className="content-section-card">
-          <Text.Medium themeText={true} weight={true} line={2}>
-            {name || "name"}
-          </Text.Medium>
+          <TitleWrapper>
+            <Text.Medium themeText={true} weight={true} line={2}>
+              {name || "name"}
+            </Text.Medium>
+            <div className="time">
+              <div>
+                <Text themeText={true}>
+                  {min || "2"}:{sec || "30"}
+                </Text>
+              </div>
+            </div>
+          </TitleWrapper>
           <Text.Medium themeText={true} line={2}>
             {des || "des"}
           </Text.Medium>
@@ -76,5 +85,29 @@ const Wrapper = styled.div`
     justify-content: start;
     align-content: flex-start;
     width: 100%;
+  }
+`;
+
+const TitleWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 60% auto;
+
+  .time {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: end;
+    height: fit-content;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.2rem 0.5rem;
+      width: fit-content;
+      min-width: 5rem;
+      background: rgba(68, 66, 178, 0.1);
+      border-radius: 5px;
+    }
   }
 `;
