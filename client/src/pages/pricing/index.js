@@ -2,8 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import PricingWave from "../../components/Wave/PricingWave";
 import Head from "next/head";
+import { View } from "../../components";
+import SwitchButton from "../../components/switchButton";
 
-const index = () => {
+const PricingPage = () => {
+  const [pos, setPos] = React.useState(false);
   return (
     <>
       <Head>
@@ -12,8 +15,30 @@ const index = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PricingWave />
+      <Wrapper className="container">
+        <View.Column>
+          <View.Child_1>
+            <View.Title
+              textAlign={true}
+              title="đăng ký học online"
+              des="Pricing plans"
+              content="Nhận quyền truy cập vào tất cả các khóa học cao cấp, hướng dẫn, tải xuống, chứng chỉ và hỗ trợ ưu tiên của chúng tôi."
+            />
+          </View.Child_1>
+          <View.Child_1>
+            <div onClick={() => setPos(!pos)}>
+              <SwitchButton pos={pos} />
+            </div>
+          </View.Child_1>
+        </View.Column>
+      </Wrapper>
     </>
   );
 };
 
-export default index;
+export default PricingPage;
+
+const Wrapper = styled.section`
+  display: block;
+  width: 100%;
+`;
