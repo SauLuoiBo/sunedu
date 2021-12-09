@@ -50,14 +50,21 @@ Button.Menu = function ButtonMenu(props) {
   );
 };
 
-Button.Search = function ButtonSearch() {
+Button.Search = function ButtonSearch(props) {
+  const { text } = props;
   return (
     <SearchWrapper>
       <label>
         <SearchIcon>
           <img src="./icons/menu/search.svg" />
         </SearchIcon>
-        <input type="text" placeholder="Search" name="search" />
+        <input
+          type="text"
+          placeholder="Search"
+          name="search"
+          value={text}
+          disabled
+        />
       </label>
     </SearchWrapper>
   );

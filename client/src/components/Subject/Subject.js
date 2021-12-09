@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Subject = (props) => {
-  const { subject, size } = props;
+  const { subject, size, onClick } = props;
   return (
-    <Wrapper size={size}>
+    <Wrapper size={size} onClick={onClick}>
       <img
         src={
           subject
