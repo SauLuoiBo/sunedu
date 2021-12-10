@@ -9,10 +9,12 @@ export const Wrapper = styled.div`
 
   .child-1 {
     width: 50rem;
+    overflow: hidden;
   }
 
   .child-2 {
     width: 100%;
+    overflow: hidden;
   }
 
   @media ${(props) => props.theme.breakpoints.lg} {
@@ -41,10 +43,48 @@ export const WrapperTwo = styled.div`
     padding: 0 auto;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
   }
 
   .child-2 {
     width: 100%;
+    overflow: hidden;
+  }
+`;
+
+export const WrapperRow = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  grid-row-gap: ${(props) => props.rowGap};
+  grid-column-gap: ${(props) => props.columnGap};
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    ${(props) => (props.md ? `grid-template-columns: 1fr;` : null)}
+  }
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    ${(props) => (props.lg ? `grid-template-columns: 1fr;` : null)}
+  }
+
+  /* @media ${(props) => props.theme.breakpoints.md} {
+    grid-template-columns: 1fr;
+  } */
+
+  .child-1 {
+    display: flex;
+    width: 100%;
+    padding: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .child-2 {
+    display: flex;
+    width: 100%;
+    padding: 0 auto;
+    align-items: center;
+    justify-content: center;
   }
 `;
 

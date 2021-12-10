@@ -4,7 +4,7 @@ import { Text } from "../../styles";
 import Link from "next/link";
 
 const SectionCard = (props) => {
-  const { number, name, des, seen, min, sec } = props;
+  const { number, name, des, seen, min } = props;
   return (
     <Link href="/">
       <Wrapper>
@@ -19,9 +19,7 @@ const SectionCard = (props) => {
             </Text.Medium>
             <div className="time">
               <div>
-                <Text themeText={true}>
-                  {min || "2"}:{sec || "30"}
-                </Text>
+                <Text themeText={true}>{min || "2:30"}</Text>
               </div>
             </div>
           </TitleWrapper>

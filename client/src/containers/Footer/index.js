@@ -57,7 +57,7 @@ const Footer = () => {
       <FooterWrapper>
         <LinkWrapper>
           {data.map((data, index) => (
-            <div>
+            <div key={index}>
               <Button.Link
                 link={data.link}
                 icon={data.icon}

@@ -8,6 +8,8 @@ import CoursesCard from "./card/CoursesCard";
 import ButtonRound from "./buttonRound";
 import StoryCard from "./card/StoryCard";
 import LivestreamCard from "./card/LivestreamCard";
+import TeacherCard from "./card/TeacherCard";
+import InstructorCard from "./card/InstructorCard";
 
 export {
   Button,
@@ -20,4 +22,6 @@ export {
   ButtonRound,
   StoryCard,
   LivestreamCard,
+  TeacherCard,
+  InstructorCard,
 };

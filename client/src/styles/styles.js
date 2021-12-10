@@ -46,11 +46,16 @@ Text.Medium = function TextMediumP({ children, ...restProps }) {
   return <TextMedium {...restProps}>{children}</TextMedium>;
 };
 
+Text.Main = function Main({ children, ...restProps }) {
+  return <TextMain {...restProps}>{children}</TextMain>;
+};
+
 export default Text;
 
 const TextNormal = styled.p`
-  font-size: 13px;
+  font-size: 1.3rem;
   line-height: 130%;
+  overflow: hidden;
   -webkit-line-clamp: ${(props) => props.line || null};
   -webkit-box-orient: vertical;
   font-weight: ${(props) => (props.weight ? "600" : "400")};
@@ -59,6 +64,17 @@ const TextNormal = styled.p`
 
 const TextMedium = styled.p`
   font-size: 1.5rem;
+  line-height: 130%;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: ${(props) => props.line || null};
+  -webkit-box-orient: vertical;
+  font-weight: ${(props) => (props.weight ? "600" : "400")};
+  color: ${(props) => (props.themeText ? " " : "rgba(255, 255, 255, 0.7)")};
+`;
+
+const TextMain = styled.p`
+  font-size: 1.3rem;
   line-height: 130%;
   display: -webkit-box;
   overflow: hidden;

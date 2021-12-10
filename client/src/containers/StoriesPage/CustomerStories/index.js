@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { StoryCard, View } from "../../../components";
 
-const CustomerStories = () => {
+const CustomerStories = (props) => {
+  const { themeText } = props;
   return (
     <Wrapper className="container">
       <View.Column rowGap="5rem">
@@ -12,6 +13,7 @@ const CustomerStories = () => {
             des="Những kỹ năng học sinh học được từ các khoá học của chúng tôi"
             content="Xem những kết quả mà học sinh đã học và đạt được bằng cách tham gia các khóa học từ Shine Edu."
             textAlign={true}
+            themeText={themeText}
           />
         </View.Child_1>
         <View.Child_1>
