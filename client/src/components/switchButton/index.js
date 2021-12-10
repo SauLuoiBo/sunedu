@@ -3,14 +3,14 @@ import styled from "styled-components";
 import { Text } from "../../styles";
 
 const SwitchButton = (props) => {
-  const { pos } = props;
+  const { pos, path1, path2 } = props;
   return (
     <Wrapper pos={pos}>
       <div className="content">
-        <Text.BodyMain themeText={true}>Thẻ tháng</Text.BodyMain>
+        <Text.BodyMain themeText={true}> {path1 || "Thẻ tháng"}</Text.BodyMain>
       </div>
       <div className="content">
-        <Text.BodyMain themeText={true}> Thẻ năm </Text.BodyMain>
+        <Text.BodyMain themeText={true}> {path2 || "Thẻ năm"}</Text.BodyMain>
       </div>
 
       <span />

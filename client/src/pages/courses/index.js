@@ -72,7 +72,11 @@ const Courses = () => {
               content="Chúng tôi tập trung vào các kiến thức hàng đầu để các em học sinh có thể chuẩn bị tốt kiến thức phổ thông của mình. Sau đó, chúng tôi dạy tất cả các kỹ năng làm bài thi để các em đạt kết quả tốt nhất."
             />
             <div onClick={() => setOfflineCourses(!offlineCourses)}>
-              <SwitchButton pos={offlineCourses} />
+              <SwitchButton
+                pos={offlineCourses}
+                path1="Trực tuyến"
+                path2="Trực tiếp"
+              />
             </div>
           </View.Child_1>
           <View.Child_2>
