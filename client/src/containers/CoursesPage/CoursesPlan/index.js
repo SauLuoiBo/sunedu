@@ -51,14 +51,22 @@ CoursesPlan.Offline = function Offline(props) {
     <Wrapper>
       <View>
         <View.Child_1>
-          <View.Title />
+          <View.Title
+            title="CS1: xã Đông Hội, huyện đông anh, Hà nôi"
+            button="Contact"
+          />
         </View.Child_1>
         <View.Child_2>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14897.270901671738!2d105.84077260000001!3d21.01996935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1639129896752!5m2!1svi!2s"
             width="100%"
             height="45rem"
-            style={{ border: "2px solid", width: "100%", height: "45rem " }}
+            style={{
+              border: "2px solid white",
+              width: "100%",
+              height: "45rem ",
+              borderRadius: "2rem",
+            }}
             allowFullScreen=""
             loading="lazy"
           ></iframe>{" "}
