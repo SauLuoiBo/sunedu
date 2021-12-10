@@ -6,11 +6,14 @@ import { View, Button, Subject, TeacherCard } from "../../components";
 import { CoursesPlan } from "../../containers/CoursesPage";
 import { CustomerStories } from "../../containers/StoriesPage";
 import SwitchButton from "../../components/switchButton";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Courses = () => {
   const [subject, setSubject] = React.useState(null);
   const [subjectName, setSubjectName] = React.useState("");
   const [offlineCourses, setOfflineCourses] = React.useState(false);
+  const router = useRouter();
 
   React.useEffect(() => {
     switch (subject) {
@@ -50,6 +53,14 @@ const Courses = () => {
       setSubject(null);
     } else setSubject(name);
   };
+
+  const ChangeOffline = () => {
+    setOfflineCourses(true);
+    setTimeout(() => {
+      router.push("/offline");
+    }, 500);
+  };
+
   return (
     <>
       <Head>
@@ -65,7 +76,7 @@ const Courses = () => {
               des="Học các khoá học và làm bài tập tốt nhất"
               content="Chúng tôi tập trung vào các kiến thức hàng đầu để các em học sinh có thể chuẩn bị tốt kiến thức phổ thông của mình. Sau đó, chúng tôi dạy tất cả các kỹ năng làm bài thi để các em đạt kết quả tốt nhất."
             />
-            <div onClick={() => setOfflineCourses(!offlineCourses)}>
+            <div onClick={ChangeOffline}>
               <SwitchButton
                 pos={offlineCourses}
                 path1="Trực tuyến"
@@ -92,47 +103,39 @@ const Courses = () => {
       </Wrapper>
 
       {/* courses plan online */}
-      {!offlineCourses && (
-        <Wrapper className="container">
-          {subject === "TOAN" ? (
-            <CoursesPlan subject="Toán" />
-          ) : subject === null ? (
-            <CoursesPlan subject="Toán" />
-          ) : null}
-          {subject === "LY" ? (
-            <CoursesPlan subject="Lý" />
-          ) : subject === null ? (
-            <CoursesPlan subject="Lý" />
-          ) : null}
-          {subject === "HOA" ? (
-            <CoursesPlan subject="Hoá" />
-          ) : subject === null ? (
-            <CoursesPlan subject="Hoá" />
-          ) : null}
-          {subject === "ANH" ? (
-            <CoursesPlan subject="Tiếng Anh" />
-          ) : subject === null ? (
-            <CoursesPlan subject="Tiếng Anh" />
-          ) : null}
-          {subject === "VAN" ? (
-            <CoursesPlan subject="Văn Học" />
-          ) : subject === null ? (
-            <CoursesPlan subject="Văn Học" />
-          ) : null}
-          {subject === "SINH" ? (
-            <CoursesPlan subject="Sinh Học" />
-          ) : subject === null ? (
-            <CoursesPlan subject="Sinh Học" />
-          ) : null}
-        </Wrapper>
-      )}
 
-      {/* courses plan offline */}
-      {offlineCourses && (
-        <Wrapper className="container">
-          <CoursesPlan.Offline />
-        </Wrapper>
-      )}
+      <Wrapper className="container">
+        {subject === "TOAN" ? (
+          <CoursesPlan subject="Toán" />
+        ) : subject === null ? (
+          <CoursesPlan subject="Toán" />
+        ) : null}
+        {subject === "LY" ? (
+          <CoursesPlan subject="Lý" />
+        ) : subject === null ? (
+          <CoursesPlan subject="Lý" />
+        ) : null}
+        {subject === "HOA" ? (
+          <CoursesPlan subject="Hoá" />
+        ) : subject === null ? (
+          <CoursesPlan subject="Hoá" />
+        ) : null}
+        {subject === "ANH" ? (
+          <CoursesPlan subject="Tiếng Anh" />
+        ) : subject === null ? (
+          <CoursesPlan subject="Tiếng Anh" />
+        ) : null}
+        {subject === "VAN" ? (
+          <CoursesPlan subject="Văn Học" />
+        ) : subject === null ? (
+          <CoursesPlan subject="Văn Học" />
+        ) : null}
+        {subject === "SINH" ? (
+          <CoursesPlan subject="Sinh Học" />
+        ) : subject === null ? (
+          <CoursesPlan subject="Sinh Học" />
+        ) : null}
+      </Wrapper>
 
       {/* stories student */}
 

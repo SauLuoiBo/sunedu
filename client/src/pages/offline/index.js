@@ -1,12 +1,22 @@
 import React from "react";
 import Head from "next/head";
 import styled from "styled-components";
-import PricingWave from "../../../components/Wave/PricingWave";
-import { View } from "../../../components";
-import SwitchButton from "../../../components/switchButton";
-import Link from "next/link";
+import PricingWave from "../../components/Wave/PricingWave";
+import { View } from "../../components";
+import SwitchButton from "../../components/switchButton";
+import { useRouter } from "next/router";
+import { CoursesPlan } from "../../containers/CoursesPage";
 
 const index = () => {
+  const router = useRouter();
+  const [onlineCourses, setOnlineCourses] = React.useState(false);
+
+  const ChangeOnline = () => {
+    setOnlineCourses(true);
+    setTimeout(() => {
+      router.push("/courses");
+    }, 500);
+  };
   return (
     <>
       <Head>
@@ -22,11 +32,20 @@ const index = () => {
               des="Học các khoá học và làm bài tập tốt nhất"
               content="Chúng tôi tập trung vào các kiến thức hàng đầu để các em học sinh có thể chuẩn bị tốt kiến thức phổ thông của mình. Sau đó, chúng tôi dạy tất cả các kỹ năng làm bài thi để các em đạt kết quả tốt nhất."
             />
-            <Link href="/courses">
-              <SwitchButton pos={true} path1="Trực tuyến" path2="Trực tiếp" />
-            </Link>
+            <div onClick={ChangeOnline}>
+              <SwitchButton
+                pos={!onlineCourses}
+                path1="Trực tuyến"
+                path2="Trực tiếp"
+              />
+            </div>
           </View.Child_1>
+          <View.Child_2>asddsa</View.Child_2>
         </View>
+      </Wrapper>
+      {/* courses plan offline */}
+      <Wrapper className="container">
+        <CoursesPlan.Offline />
       </Wrapper>
     </>
   );

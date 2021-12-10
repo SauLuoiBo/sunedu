@@ -45,7 +45,16 @@ CoursesPlan.Offline = function Offline(props) {
             button="Contact"
           />
         </View.Child_1>
-        <View.Child_2></View.Child_2>
+        <View.Child_2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.3759680374237!2d105.84440711540329!3d21.13743108943423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313500e5d811f90b%3A0xf8a02d5a749a3b73!2sSky%20Book%20%26%20Coffee!5e0!3m2!1svi!2s!4v1639167564414!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style={{ borderRadius: "2rem", width: "100%", height: "45rem" }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </View.Child_2>
       </View>
       <View.Column>
         <View.Child_1>
