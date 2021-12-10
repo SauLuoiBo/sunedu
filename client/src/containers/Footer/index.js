@@ -6,47 +6,47 @@ import { Text } from "../../styles";
 const data = [
   {
     link: "/courses",
-    icon: "./icons/menu/courses.svg",
+    icon: "/icons/menu/courses.svg",
     text: "Home",
   },
   {
     link: "/courses",
-    icon: "./icons/menu/courses.svg",
+    icon: "/icons/menu/courses.svg",
     text: "Tài liệu",
   },
   {
     link: "/courses",
-    icon: "./icons/menu/courses.svg",
+    icon: "/icons/menu/courses.svg",
     text: "Khoá học",
   },
   {
     link: "/courses",
-    icon: "./icons/menu/search.svg",
+    icon: "/icons/menu/search.svg",
     text: "Tìm kiếm",
   },
   {
     link: "/courses",
-    icon: "./icons/menu/tutorials.svg",
+    icon: "/icons/menu/tutorials.svg",
     text: "Luyện tập",
   },
   {
     link: "/courses",
-    icon: "./icons/menu/profile.svg",
+    icon: "/icons/menu/profile.svg",
     text: "Tài khoản",
   },
   {
     link: "/courses",
-    icon: "./icons/menu/pricing.svg",
+    icon: "/icons/menu/pricing.svg",
     text: "Đăng ký",
   },
   {
     link: "/courses",
-    icon: "./icons/menu/courses.svg",
+    icon: "/icons/menu/courses.svg",
     text: "Trung tâm",
   },
   {
     link: "/livestreams",
-    icon: "./icons/menu/courses.svg",
+    icon: "/icons/menu/courses.svg",
     text: "Giấy phép",
   },
 ];

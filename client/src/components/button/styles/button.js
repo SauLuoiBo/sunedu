@@ -5,13 +5,14 @@ export const Wrapper = styled.button`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: ${(props) => (props.width ? "flex-start" : "space-between")};
+  justify-content: ${(props) => (props.full ? "flex-start" : "space-between")};
   align-content: center;
   gap: 1rem;
   border: none;
   background-color: transparent;
   transition: all 0.3s ease-in-out 0s;
-  width: ${(props) => (props.width ? "100%" : "fit-content")};
+  width: ${(props) => (props.full ? `100%` : `fit-content`)};
+
   cursor: pointer;
   background-blend-mode: overlay;
   background-attachment: scroll;
@@ -19,9 +20,11 @@ export const Wrapper = styled.button`
   position: relative;
   z-index: 10;
 
-  img {
+  .img {
     height: 2.4rem;
+
     width: 2.4rem;
+    display: block;
   }
 
   p {

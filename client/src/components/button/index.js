@@ -3,11 +3,12 @@ import { Wrapper, WrapperTwo } from "./styles/button";
 import Link from "next/link";
 import styled from "styled-components";
 import { Text } from "../../styles";
+import Image from "next/image";
 
 const Button = (props) => {
   const { icon, text, width } = props;
   return (
-    <Wrapper width={width}>
+    <Wrapper full={width}>
       {icon ? <img src={icon} /> : ""}
       {text ? <p>{text}</p> : null}
     </Wrapper>
@@ -18,8 +19,18 @@ Button.Link = function ButtonLink(props) {
   const { icon, text, link, width } = props;
   return (
     <Link href={link}>
-      <Wrapper width={width}>
-        {icon ? <img src={icon} /> : null}
+      <Wrapper full={width}>
+        {icon ? (
+          <div className="img">
+            <Image
+              src={icon}
+              alt="Landscape picture"
+              width={24}
+              height={24}
+              layout="responsive"
+            />
+          </div>
+        ) : null}
         {text ? <p>{text}</p> : null}
       </Wrapper>
     </Link>

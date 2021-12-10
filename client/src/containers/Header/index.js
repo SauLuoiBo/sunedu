@@ -9,31 +9,27 @@ const Header = () => {
       <Navbar>
         <Button.Link
           link="/courses"
-          icon="./icons/menu/courses.svg"
+          icon="/icons/menu/courses.svg"
           text="Khoá học"
         />
         <Button.Link
           link="/tutorials"
-          icon="./icons/menu/tutorials.svg"
+          icon="/icons/menu/tutorials.svg"
           text="Luyện tập"
         />
         <Button.Link
           link="/pricing"
-          icon="./icons/menu/pricing.svg"
+          icon="/icons/menu/pricing.svg"
           text="Đăng ký"
         />
-        <Button.Link
-          link="/blog"
-          icon="./icons/menu/calendar.svg"
-          text="Blog"
-        />
+        <Button.Link link="/blog" icon="/icons/menu/calendar.svg" text="Blog" />
         <Button.Link
           link="/livestreams"
-          icon="./icons/menu/livestreams.svg"
+          icon="/icons/menu/livestreams.svg"
           text="Livestreams"
         />
-        <Button icon="./icons/menu/more.svg" />
-        <Button icon="./icons/menu/search.svg" />
+        <Button icon="/icons/menu/more.svg" />
+        <Button icon="/icons/menu/search.svg" />
       </Navbar>
     </Wrapper>
   );
