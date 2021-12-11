@@ -2,31 +2,8 @@ import React from "react";
 import { View } from "../components";
 import styled from "styled-components";
 import PricingWave from "../components/Wave/PricingWave";
-import { useRouter } from "next/router";
 
 const NotFound = () => {
-  const router = useRouter();
-  const [number, setNumber] = React.useState(20);
-
-  let timerOut = setTimeout(() => router.push("/"), 20000);
-
-  let timerSec = setTimeout(() => {
-    setNumber(number - 1);
-    console.log(number);
-  }, 1000);
-
-  React.useEffect(() => {
-    return () => {
-      clearTimeout(timerOut);
-    };
-  }, []);
-
-  React.useEffect(() => {
-    return () => {
-      clearTimeout(timerSec);
-    };
-  }, [number]);
-
   return (
     <>
       <PricingWave />
