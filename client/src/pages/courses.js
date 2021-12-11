@@ -1,12 +1,11 @@
 import React from "react";
 import Head from "next/head";
-import PricingWave from "../../components/Wave/PricingWave";
+import PricingWave from "../components/Wave/PricingWave";
 import styled from "styled-components";
-import { View, Button, Subject, TeacherCard } from "../../components";
-import { CoursesPlan } from "../../containers/CoursesPage";
-import { CustomerStories } from "../../containers/StoriesPage";
-import SwitchButton from "../../components/switchButton";
-import Link from "next/link";
+import { View, Button, Subject, TeacherCard } from "../components";
+import { CoursesPlan } from "../containers/CoursesPage";
+import { CustomerStories } from "../containers/StoriesPage";
+import SwitchButton from "../components/switchButton";
 import { useRouter } from "next/router";
 
 const Courses = () => {

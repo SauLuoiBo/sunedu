@@ -9,9 +9,7 @@ const Layout = ({ children }) => {
       <Header />
       <main>{children}</main>
       <Footer />
-      <div style={{ width: "10rem", height: "10rem" }}>
-        <Facebook1 />
-      </div>
+      <Facebook1 />
     </>
   );
 };
