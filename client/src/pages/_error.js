@@ -10,7 +10,13 @@ const NotFound = () => {
       <section className="container">
         <View reverse={true}>
           <View.Child_1>
-            <View.Title title="Page not found" des="Oh No, ERROR 404" />
+            <View.Title
+              title="Page not found"
+              des="Oh No, ERROR 404"
+              content="Có lẽ Shine Edu bị hỏng trên trang này. Quay trở về trang chủ!!!"
+              button="HomePage"
+              link="/"
+            />
           </View.Child_1>
           <View.Child_2>
             <ImageWrapper>
