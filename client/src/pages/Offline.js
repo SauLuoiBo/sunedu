@@ -7,7 +7,7 @@ import SwitchButton from "../components/switchButton";
 import { useRouter } from "next/router";
 import { CoursesPlan } from "../containers/CoursesPage";
 
-const index = () => {
+const OfflinePage = () => {
   const router = useRouter();
   const [onlineCourses, setOnlineCourses] = React.useState(false);
 
@@ -51,7 +51,7 @@ const index = () => {
   );
 };
 
-export default index;
+export default OfflinePage;
 
 const Wrapper = styled.section`
   width: 100%;
