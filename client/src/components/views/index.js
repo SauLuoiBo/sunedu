@@ -42,7 +42,7 @@ View.Title = function ViewTitle(props) {
       {button ? (
         <Button.Menu
           link={link || "/tutorials"}
-          icon={icon || "./icons/menu/tutorials.svg"}
+          icon={icon || "/icons/menu/tutorials.svg"}
           text={button || "Start tutorials"}
         />
       ) : null}

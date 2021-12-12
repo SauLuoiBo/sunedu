@@ -10,6 +10,8 @@ import StoryCard from "./card/StoryCard";
 import LivestreamCard from "./card/LivestreamCard";
 import TeacherCard from "./card/TeacherCard";
 import InstructorCard from "./card/InstructorCard";
+import RoadmapCard from "./card/RoadmapCard";
+import PricingCard from "./card/PricingCard";
 
 export {
   Button,
@@ -24,4 +26,6 @@ export {
   LivestreamCard,
   TeacherCard,
   InstructorCard,
+  RoadmapCard,
+  PricingCard,
 };

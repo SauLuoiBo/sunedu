@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import PricingWave from "../../components/Wave/PricingWave";
 import Head from "next/head";
-import { View } from "../../components";
+import { PricingCard, RoadmapCard, View } from "../../components";
 import SwitchButton from "../../components/switchButton";
+import { Text } from "../../styles";
 
 const PricingPage = () => {
   const [pos, setPos] = React.useState(false);
@@ -30,6 +31,42 @@ const PricingPage = () => {
               <SwitchButton pos={pos} />
             </div>
           </View.Child_1>
+
+          {/* 
+          the dang ky hoc */}
+          <View.Child_1>
+            <PricingWrapper>
+              <PricingCard />
+              <PricingCard />
+              <PricingCard />
+            </PricingWrapper>
+          </View.Child_1>
+        </View.Column>
+      </Wrapper>
+      {/* 
+      road map */}
+      <Wrapper className="container">
+        <View.Column>
+          <View.Child_1>
+            <Text.TextTitle themeText={true}>Road Map</Text.TextTitle>
+          </View.Child_1>
+          <View.Child_1>
+            <RoadmapWrapper>
+              <RoadmapCard />
+              <RoadmapCard
+                titleIcon="content.svg"
+                colorOne="rgb(67, 22, 219)"
+                colorTwo="rgb(144, 118, 231)"
+                title="Content"
+              />
+              <RoadmapCard
+                titleIcon="work.svg"
+                colorOne="rgb(158, 225, 236)"
+                colorTwo="rgb(229, 167, 224)"
+                title="Features"
+              />
+            </RoadmapWrapper>
+          </View.Child_1>
         </View.Column>
       </Wrapper>
     </>
@@ -41,4 +78,24 @@ export default PricingPage;
 const Wrapper = styled.section`
   display: block;
   width: 100%;
+`;
+
+const RoadmapWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 0px auto;
+  width: 100%;
+  justify-items: center;
+  padding: 0px 30px;
+`;
+
+const PricingWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 5px;
+  margin: 30px auto;
+  width: 100%;
+  justify-items: center;
+  padding: 0px 30px;
 `;

@@ -9,12 +9,12 @@ export const Wrapper = styled.div`
 
   .child-1 {
     width: 50rem;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .child-2 {
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   @media ${(props) => props.theme.breakpoints.lg} {
@@ -43,12 +43,12 @@ export const WrapperTwo = styled.div`
     padding: 0 auto;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .child-2 {
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 `;
 

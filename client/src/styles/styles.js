@@ -25,6 +25,10 @@ Text.Title = function TextTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
 };
 
+Text.TextTitle = function TextTitleH4({ children, ...restProps }) {
+  return <TextTitle {...restProps}>{children}</TextTitle>;
+};
+
 Text.Link = function TextLinkA(props) {
   const { link, target, theme } = props;
   return (
@@ -50,10 +54,14 @@ Text.Main = function Main({ children, ...restProps }) {
   return <TextMain {...restProps}>{children}</TextMain>;
 };
 
+Text.Subtitle = function Subtitle({ children, ...restProps }) {
+  return <SubTitle {...restProps}>{children}</SubTitle>;
+};
+
 export default Text;
 
 const TextNormal = styled.p`
-  font-size: 1.3rem;
+  font-size: 13px;
   line-height: 130%;
   overflow: hidden;
   -webkit-line-clamp: ${(props) => props.line || null};
@@ -63,7 +71,7 @@ const TextNormal = styled.p`
 `;
 
 const TextMedium = styled.p`
-  font-size: 1.5rem;
+  font-size: 15px;
   line-height: 130%;
   display: -webkit-box;
   overflow: hidden;
@@ -71,10 +79,14 @@ const TextMedium = styled.p`
   -webkit-box-orient: vertical;
   font-weight: ${(props) => (props.weight ? "600" : "400")};
   color: ${(props) => (props.themeText ? " " : "rgba(255, 255, 255, 0.7)")};
+
+  span {
+    font-weight: bold;
+  }
 `;
 
 const TextMain = styled.p`
-  font-size: 1.3rem;
+  font-size: 13px;
   line-height: 130%;
   display: -webkit-box;
   overflow: hidden;
@@ -97,7 +109,7 @@ const TextCaption = styled.p`
 `;
 
 const TextCaption2 = styled.p`
-  font-size: 1.5rem;
+  font-size: 15px;
   line-height: 1.8rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -109,13 +121,13 @@ const TextCaption2 = styled.p`
 `;
 
 const BodyMain = styled.p`
-  font-size: 2rem;
+  font-size: 20px;
   line-height: 140%;
   color: ${(props) => (props.themeText ? "" : "rgba(255, 255, 255, 0.7)")};
 `;
 
 const TextLink = styled.a`
-  font-size: 1.3rem;
+  font-size: 13px;
   line-height: 130%;
   font-weight: 600;
   color: ${(props) => (props.themeText ? "" : "rgba(255, 255, 255, 0.7)")};
@@ -136,7 +148,34 @@ const TextBodyIntro = styled.h3`
 `;
 
 const Title = styled.h1`
-  font-size: 4rem;
+  font-size: 40px;
   line-height: 120%;
   color: ${(props) => (props.themeText ? "" : "rgba(255, 255, 255, 0.7)")};
+`;
+
+const TextTitle = styled.h4`
+  font-size: 30px;
+  line-height: 120%;
+  overflow: hidden;
+  -webkit-line-clamp: ${(props) => props.line || null};
+  -webkit-box-orient: vertical;
+  color: ${(props) => (props.themeText ? "" : "rgba(255, 255, 255, 0.7)")};
+`;
+
+const SubTitle = styled.h1`
+  font-size: 60px;
+  line-height: 120%;
+  overflow: hidden;
+  -webkit-line-clamp: ${(props) => props.line || null};
+  -webkit-box-orient: vertical;
+  color: ${(props) => (props.themeText ? "" : "rgba(255, 255, 255, 0.7)")};
+  line-height: 95px;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 50px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 34px;
+  }
 `;
