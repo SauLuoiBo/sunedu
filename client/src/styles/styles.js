@@ -30,9 +30,14 @@ Text.TextTitle = function TextTitleH4({ children, ...restProps }) {
 };
 
 Text.Link = function TextLinkA(props) {
-  const { link, target, theme } = props;
+  const { link, target, themeText, size } = props;
   return (
-    <TextLink href={link || "/"} target={target} themeText={theme}>
+    <TextLink
+      href={link || "/"}
+      size={size}
+      target={target}
+      themeText={themeText}
+    >
       {props.text}
     </TextLink>
   );
@@ -94,6 +99,10 @@ const TextMain = styled.p`
   -webkit-box-orient: vertical;
   font-weight: ${(props) => (props.weight ? "600" : "400")};
   color: ${(props) => (props.themeText ? " " : "rgba(255, 255, 255, 0.7)")};
+
+  span {
+    font-weight: bold;
+  }
 `;
 
 const TextCaption = styled.p`
@@ -127,10 +136,11 @@ const BodyMain = styled.p`
 `;
 
 const TextLink = styled.a`
-  font-size: 13px;
+  font-size: ${(props) => props.size || "13px"};
   line-height: 130%;
   font-weight: 600;
-  color: ${(props) => (props.themeText ? "" : "rgba(255, 255, 255, 0.7)")};
+  color: ${(props) =>
+    props.themeText ? "rgb(0, 207, 253);" : "rgba(255, 255, 255, 0.7)"};
   text-decoration: none;
 `;
 

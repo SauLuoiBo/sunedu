@@ -47,8 +47,12 @@ export const WrapperTwo = styled.div`
   }
 
   .child-2 {
+    display: flex;
     width: 100%;
-    /* overflow: hidden; */
+    padding: 0 auto;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 `;
 

@@ -16,15 +16,16 @@ const Feature = (props) => {
   );
 };
 
-const PricingCard = () => {
+const PricingCard = (props) => {
+  const { title, price, pay } = props;
   return (
     <Wrapper>
       <div className="pricing-background" />
       <div className="pricing-content">
         <TextWrapper>
-          <Text.Caption2>Basic</Text.Caption2>
-          <Text.Subtitle>Free</Text.Subtitle>
-          <Text.Medium>Trial</Text.Medium>
+          <Text.Caption2>{title || "Basic"}</Text.Caption2>
+          <Text.Subtitle>{price || "Miễn phí"}</Text.Subtitle>
+          <Text.Medium>{pay || "Trial"}</Text.Medium>
           <div className="features-Wrapper ">
             {" "}
             <Feature textOne="" textTwo="Khoá học" textThree="Miễn phí" />

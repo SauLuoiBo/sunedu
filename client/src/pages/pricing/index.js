@@ -35,11 +35,52 @@ const PricingPage = () => {
           {/* 
           the dang ky hoc */}
           <View.Child_1>
-            <PricingWrapper>
-              <PricingCard />
-              <PricingCard />
-              <PricingCard />
-            </PricingWrapper>
+            {/* hang thang  */}
+            {!pos && (
+              <PricingWrapper>
+                <PricingCard />
+                <PricingCard
+                  title="Pro"
+                  price="200k"
+                  pay="mỗi tháng, thanh toán hàng tháng"
+                />
+                <PricingCard
+                  title="Team"
+                  price="500k"
+                  pay="mỗi tháng, thanh toán hàng tháng"
+                />
+              </PricingWrapper>
+            )}
+
+            {/* hang nam  */}
+            {pos && (
+              <PricingWrapper>
+                <PricingCard />
+                <PricingCard
+                  title="Pro"
+                  price="100k"
+                  pay="mỗi tháng, thanh toán hàng năm"
+                />
+                <PricingCard
+                  title="Team"
+                  price="250k"
+                  pay="mỗi tháng, thanh toán hàng năm"
+                />
+              </PricingWrapper>
+            )}
+          </View.Child_1>
+          <View.Child_1>
+            <TextWrapper>
+              <Text.Medium themeText={true}>
+                Tiết kiệm 50% với gói hàng năm. Chúng tôi hỗ trợ nhiều phương
+                thức thanh toán. Có câu hỏi nào không?{" "}
+                <Text.Link
+                  themeText={true}
+                  text="Liên hệ chúng tôi"
+                  size="15px"
+                />
+              </Text.Medium>
+            </TextWrapper>
           </View.Child_1>
         </View.Column>
       </Wrapper>
@@ -94,8 +135,15 @@ const PricingWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 5px;
-  margin: 30px auto;
+  margin: 10rem auto;
   width: 100%;
   justify-items: center;
   padding: 0px 30px;
+`;
+
+const TextWrapper = styled.div`
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
 `;

@@ -57,7 +57,7 @@ CoursesPlan.Offline = function Offline(props) {
         </View.Child_2>
       </View>
       <View.Column>
-        <View.Child_1>
+        <View.Child_2>
           <TeacherWrapper>
             <InstructorCard />
             <InstructorCard />
@@ -66,7 +66,7 @@ CoursesPlan.Offline = function Offline(props) {
             <InstructorCard />
             <InstructorCard />
           </TeacherWrapper>
-        </View.Child_1>
+        </View.Child_2>
       </View.Column>
       <View.Column>
         <View.Child_1>
@@ -94,6 +94,10 @@ const Wrapper = styled.div`
   background: rgba(15, 14, 71, 0.3);
   box-shadow: rgb(255 255 255 / 20%) 0px 0px 0px 0.5px inset;
   margin: 2rem 0;
+
+  .hidden {
+    overflow: hidden;
+  }
 `;
 
 const CoursesWrapper = styled.div`

@@ -13,7 +13,7 @@ const RoadmapCard = (props) => {
         <div className="content-wrapper">
           <div>
             <Image
-              src={`/illustrations/${titleIcon || CoursesCard.svg}`}
+              src={`/illustrations/${titleIcon || "courses.svg"}`}
               width={200}
               height={200}
             />
