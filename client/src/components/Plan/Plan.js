@@ -1,10 +1,9 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import React from "react";
-import { Children } from "react";
+
 import { Text } from "../../styles";
 
-const Plan = ({ children }, props) => {
-  const { title } = props;
+const Plan = ({ children, title }) => {
   return (
     <Wrapper>
       <Text.Caption> {title || "title"}</Text.Caption>

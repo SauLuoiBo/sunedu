@@ -2,6 +2,7 @@ import React from "react";
 import { View } from "../components";
 import styled from "styled-components";
 import PricingWave from "../components/Wave/PricingWave";
+import Image from "next/image";
 
 const NotFound = () => {
   return (
@@ -20,7 +21,7 @@ const NotFound = () => {
           </View.Child_1>
           <View.Child_2>
             <ImageWrapper>
-              <img src="/background/error.svg" />
+              <Image width={50} height={50} src="/background/error.svg" />
             </ImageWrapper>
           </View.Child_2>
         </View>

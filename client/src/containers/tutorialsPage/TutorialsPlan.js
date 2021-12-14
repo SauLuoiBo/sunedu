@@ -9,7 +9,7 @@ const TutorialsPlan = () => {
       <TutorialsWrapper>
         <HandbookCard />
         <div className="content">
-          <Plan>
+          <Plan title="30 bài luyện tập">
             <SectionCard />
             <SectionCard />
             <SectionCard />

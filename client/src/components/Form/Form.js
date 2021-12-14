@@ -11,7 +11,7 @@ Form.Input = function Input(props) {
   const { icon, type, placeholder } = props;
   return (
     <InputWrapper>
-      <label for={type || "email"}>
+      <label htmlFor={type || "email"}>
         <div className="icon-wrapper">
           {" "}
           <Image
