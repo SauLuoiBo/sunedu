@@ -106,8 +106,8 @@ const TextMain = styled.p`
 `;
 
 const TextCaption = styled.p`
-  font-size: 1.5rem;
-  line-height: 1.8rem;
+  font-size: 15px;
+  line-height: 18px;
   font-weight: 400;
   display: -webkit-box;
   overflow: hidden;
@@ -119,7 +119,7 @@ const TextCaption = styled.p`
 
 const TextCaption2 = styled.p`
   font-size: 15px;
-  line-height: 1.8rem;
+  line-height: 18px;
   text-transform: uppercase;
   font-weight: 600;
   display: -webkit-box;

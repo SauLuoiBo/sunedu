@@ -6,7 +6,7 @@ const HandbookCard = (props) => {
   const { link, subject, title, text, des1, des2, colorOne, colorTwo } = props;
 
   return (
-    <Link href={link}>
+    <Link href={link || "/"}>
       <Wrapper>
         <WrapperBackground>
           <LazyLoad>

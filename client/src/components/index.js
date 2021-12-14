@@ -13,6 +13,7 @@ import InstructorCard from "./card/InstructorCard";
 import RoadmapCard from "./card/RoadmapCard";
 import PricingCard from "./card/PricingCard";
 import Form from "./Form/Form";
+import Plan from "./Plan/Plan";
 
 export {
   Button,
@@ -30,4 +31,5 @@ export {
   RoadmapCard,
   PricingCard,
   Form,
+  Plan,
 };

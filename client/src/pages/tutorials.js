@@ -1,11 +1,13 @@
 import React from "react";
 import Head from "next/head";
-import PricingWave from "../../components/Wave/PricingWave";
+import PricingWave from "../components/Wave/PricingWave";
 import styled from "styled-components";
-import { View } from "../../components";
+import { HandbookCard, Plan, View } from "../components";
+import SectionCard from "../components/card/SectionCard";
+import { TutorialsPlan } from "../containers/tutorialsPage";
 styled;
 
-const index = () => {
+const Tutorials = () => {
   return (
     <>
       <Head>
@@ -25,12 +27,33 @@ const index = () => {
           <View.Child_2></View.Child_2>
         </View>
       </Wrapper>
+      <Wrapper className="container">
+        <TutorialsPlan />
+      </Wrapper>
     </>
   );
 };
 
-export default index;
+export default Tutorials;
 
 const Wrapper = styled.section`
   display: block;
+`;
+
+const TutorialsWrapper = styled.div`
+  display: grid;
+  width: 100%;
+  grid-template-columns: 300px auto;
+  grid-gap: 3rem;
+  justify-items: center;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
 `;
