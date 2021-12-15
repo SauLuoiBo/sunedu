@@ -6,6 +6,14 @@ import PricingWave from "../../components/Wave/PricingWave";
 import { Text } from "../../styles";
 import Head from "next/head";
 
+import JsxParser from "react-jsx-parser";
+import {
+  Equation,
+  EquationEvaluate,
+  EquationOptions,
+  defaultErrorHandler,
+} from "react-equation";
+
 const Test = [
   { number: "1", answer: "A" },
   { number: "2", answer: "" },
@@ -16,6 +24,8 @@ const Test = [
   { number: "7", answer: "A" },
 ];
 
+const text =
+  '<Equation value="5m + 1/2m * sin(π) + (22 m^2)+ (ln_2(9))^2 / (2m)" />';
 const Work = () => {
   const [choose, setChoose] = React.useState(1);
 
@@ -68,6 +78,27 @@ const Work = () => {
                 </div>
               </div>
               <div className="saparetor" />
+              {/* <div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "start",
+                    alignItems: "center",
+                  }}
+                >
+                  <Equation value="5m + 1/2m * sin(π) + (22 m^2)+ (ln_2(9))^2 / (2m)" />{" "}
+                  híad hljkasd
+                  <br />
+                  <Equation value="5m + 1/2m * sin(π) + (22 m^2)+ (ln_2(9))^2 / (2m)" />
+                </div>
+              </div> */}
+              <div>
+                <Text>
+                  <JsxParser components={{ Equation }} jsx={text} />
+                  <JsxParser components={{ Equation }} jsx={text} />
+                  <JsxParser components={{ Equation }} jsx={text} />
+                </Text>
+              </div>
 
               <PlanWrapper>dsadsa</PlanWrapper>
             </AnswerPlan>
