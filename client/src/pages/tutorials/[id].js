@@ -25,7 +25,7 @@ const Test = [
 ];
 
 const text =
-  '<Equation value="5m + 1/2m * sin(π) + (22 m^2)+ (ln_2(9))^2 / (2m)" />';
+  '<Equation value="5m + 1/2m * sin(π) + (22 m^2)+ (ln_2(9))^2 / (2m)" /> dsfdfd';
 const Work = () => {
   const [choose, setChoose] = React.useState(1);
 
@@ -78,29 +78,28 @@ const Work = () => {
                 </div>
               </div>
               <div className="saparetor" />
+
               {/* <div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "start",
-                    alignItems: "center",
-                  }}
-                >
-                  <Equation value="5m + 1/2m * sin(π) + (22 m^2)+ (ln_2(9))^2 / (2m)" />{" "}
-                  híad hljkasd
-                  <br />
-                  <Equation value="5m + 1/2m * sin(π) + (22 m^2)+ (ln_2(9))^2 / (2m)" />
-                </div>
-              </div> */}
-              <div>
                 <Text>
                   <JsxParser components={{ Equation }} jsx={text} />
                   <JsxParser components={{ Equation }} jsx={text} />
                   <JsxParser components={{ Equation }} jsx={text} />
                 </Text>
-              </div>
+              </div> */}
 
               <PlanWrapper>dsadsa</PlanWrapper>
+              <div className="saparetor" />
+              <div className="header-title ">
+                {/* <Text.BodyIntro>Trả lời</Text.BodyIntro> */}
+                <iframe
+                  src="https://onedrive.live.com/embed?cid=C003F6CBB5B188F1&resid=C003F6CBB5B188F1%21542689&authkey=AByHbCr3OHtZwnc&em=2"
+                  width="100%"
+                  height="288"
+                  frameborder="0"
+                  scrolling="no"
+                  style={{ backgroundColor: "red" }}
+                ></iframe>
+              </div>
             </AnswerPlan>
           </View.Child_2>
         </View>
