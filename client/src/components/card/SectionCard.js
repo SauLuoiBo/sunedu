@@ -4,9 +4,9 @@ import { Text } from "../../styles";
 import Link from "next/link";
 
 const SectionCard = (props) => {
-  const { number, name, des, seen, min } = props;
+  const { number, name, des, seen, min, link } = props;
   return (
-    <Link href="/">
+    <Link href={link || "/"}>
       <Wrapper>
         <div className="number">
           <Text.BodyMain themeText={true}>{number || "1"}</Text.BodyMain>

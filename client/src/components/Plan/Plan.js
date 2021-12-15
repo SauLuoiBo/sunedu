@@ -3,11 +3,11 @@ import React from "react";
 
 import { Text } from "../../styles";
 
-const Plan = ({ children, title }) => {
+const Plan = ({ children, title, widthCard }) => {
   return (
     <Wrapper>
       <Text.Caption> {title || "title"}</Text.Caption>
-      <PlanWrapper>{children}</PlanWrapper>
+      <PlanWrapper widthCard={widthCard}>{children}</PlanWrapper>
     </Wrapper>
   );
 };
@@ -32,11 +32,12 @@ const Wrapper = styled.div`
 `;
 
 const PlanWrapper = styled.div`
+  --width-min: ${(props) => props.widthCard || "280px"};
   margin: 20px 0;
   width: 100%;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--width-min), 1fr));
   overflow-y: auto;
   /* padding: 20px;
   margin: 0 auto; */

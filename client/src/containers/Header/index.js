@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Button } from "../../components";
+import { Button, Logo } from "../../components";
 import { ModalSignIn } from "../Modal";
 import { Navbar, Wrapper } from "./styles/header";
 
@@ -12,7 +12,11 @@ const Header = () => {
       {showSignIn && <ModalSignIn close={() => setShowSignIn(false)} />}
 
       <Wrapper className="container">
-        <Link href="/">Logo</Link>
+        <Link href="/">
+          <div>
+            <Logo />
+          </div>
+        </Link>
         <Navbar>
           <Button.Link
             link="/courses"

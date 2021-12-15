@@ -10,7 +10,7 @@ const TutorialsPlan = () => {
         <HandbookCard />
         <div className="content">
           <Plan title="30 bài luyện tập">
-            <SectionCard />
+            <SectionCard link="tutorials/sd" />
             <SectionCard />
             <SectionCard />
             <SectionCard />

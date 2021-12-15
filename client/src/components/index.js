@@ -14,6 +14,7 @@ import RoadmapCard from "./card/RoadmapCard";
 import PricingCard from "./card/PricingCard";
 import Form from "./Form/Form";
 import Plan from "./Plan/Plan";
+import Logo from "./Logos/Logo";
 
 export {
   Button,
@@ -32,4 +33,5 @@ export {
   PricingCard,
   Form,
   Plan,
+  Logo,
 };
