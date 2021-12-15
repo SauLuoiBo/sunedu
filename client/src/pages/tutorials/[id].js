@@ -95,9 +95,9 @@ const Work = () => {
                   src="https://onedrive.live.com/embed?cid=C003F6CBB5B188F1&resid=C003F6CBB5B188F1%21542689&authkey=AByHbCr3OHtZwnc&em=2"
                   width="100%"
                   height="288"
-                  frameborder="0"
+                  frameBorder="20"
                   scrolling="no"
-                  style={{ backgroundColor: "red" }}
+                  style={{ bor: "red" }}
                 ></iframe>
               </div>
             </AnswerPlan>
