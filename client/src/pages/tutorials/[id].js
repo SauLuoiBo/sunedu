@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Plan, View } from "../../components";
-import { QuestCard } from "../../components/Test";
+import { AnswerCard, QuestCard } from "../../components/Test";
 import PricingWave from "../../components/Wave/PricingWave";
 import { Text } from "../../styles";
 import Head from "next/head";
@@ -13,29 +13,39 @@ import {
   EquationOptions,
   defaultErrorHandler,
 } from "react-equation";
+import { updateArray } from "../../util/updataArray";
 
 const Test = [
-  { number: "1", answer: "A" },
+  { number: "1", answer: "" },
   { number: "2", answer: "" },
-  { number: "3", answer: "A" },
-  { number: "4", answer: "A" },
+  { number: "3", answer: "" },
+  { number: "4", answer: "" },
   { number: "5", answer: "A" },
   { number: "6", answer: "A" },
   { number: "7", answer: "A" },
 ];
 
-const text =
-  '<Equation value="5m + 1/2m * sin(π) + (22 m^2)+ (ln_2(9))^2 / (2m)" /> dsfdfd';
 const Work = () => {
-  const [choose, setChoose] = React.useState(1);
+  const [choose, setChoose] = React.useState(0);
+  const [answer, setAnswer] = React.useState(null);
+  const [listAnswer, setListAnswer] = React.useState([]);
 
   const PreAnswer = () => {
     if (choose > 49) return true;
+    if (answer) {
+      updateArray(answer, choose, listAnswer, setListAnswer);
+    }
     setChoose(choose + 1);
+    setAnswer(null);
   };
   const RevAnswer = () => {
-    if (choose < 2) return true;
+    if (choose < 1) return true;
+    if (answer) {
+      updateArray(answer, choose, listAnswer, setListAnswer);
+    }
+
     setChoose(choose - 1);
+    setAnswer(null);
   };
 
   return (
@@ -55,9 +65,15 @@ const Work = () => {
                   <QuestCard
                     key={index}
                     number={index + 1}
-                    current={choose}
-                    answer={item.answer}
-                    onClick={() => setChoose(index + 1)}
+                    current={choose + 1}
+                    answer={listAnswer[index]}
+                    onClick={() => {
+                      if (answer) {
+                        updateArray(answer, choose, listAnswer, setListAnswer);
+                      }
+                      setChoose(index);
+                    }}
+                    correct={item.answer === answer}
                   />
                 );
               })}
@@ -67,26 +83,15 @@ const Work = () => {
             <AnswerPlan>
               <div className="header-title ">
                 <div onClick={() => RevAnswer()}>
-                  {" "}
-                  <Text.BodyIntro>Câu trước</Text.BodyIntro>{" "}
+                  <Text.BodyIntro>Câu trước</Text.BodyIntro>
                 </div>
 
-                <Text.BodyIntro>Câu {choose}</Text.BodyIntro>
+                <Text.BodyIntro>Câu {choose + 1}</Text.BodyIntro>
                 <div onClick={() => PreAnswer()}>
-                  {" "}
-                  <Text.BodyIntro>Câu tiếp</Text.BodyIntro>{" "}
+                  <Text.BodyIntro>Câu tiếp</Text.BodyIntro>
                 </div>
               </div>
               <div className="saparetor" />
-
-              {/* <div>
-                <Text>
-                  <JsxParser components={{ Equation }} jsx={text} />
-                  <JsxParser components={{ Equation }} jsx={text} />
-                  <JsxParser components={{ Equation }} jsx={text} />
-                </Text>
-              </div> */}
-
               <PlanWrapper>
                 <iframe
                   src="https://onedrive.live.com/embed?resid=C003F6CBB5B188F1%21542689&amp;authkey=%21AByHbCr3OHtZwnc&amp;em=2&amp;wdEmbedCode=0&amp;wdPrint=0"
@@ -97,6 +102,60 @@ const Work = () => {
               </PlanWrapper>
               <div className="saparetor" />
               <Text.BodyIntro>Trả lời</Text.BodyIntro>
+              <AnswerWrapper>
+                <AnswerCard
+                  answer="A"
+                  choose={listAnswer[choose]}
+                  onClick={() =>
+                    updateArray("A", choose, listAnswer, setListAnswer)
+                  }
+                />
+                <AnswerCard
+                  answer="B"
+                  choose={listAnswer[choose]}
+                  onClick={() =>
+                    updateArray("B", choose, listAnswer, setListAnswer)
+                  }
+                />
+                <AnswerCard
+                  answer="C"
+                  choose={listAnswer[choose]}
+                  onClick={() =>
+                    updateArray("C", choose, listAnswer, setListAnswer)
+                  }
+                />
+                <AnswerCard
+                  answer="D"
+                  choose={listAnswer[choose]}
+                  onClick={() =>
+                    updateArray("D", choose, listAnswer, setListAnswer)
+                  }
+                />
+              </AnswerWrapper>
+
+              <div className="saparetor" />
+              <Text.BodyIntro>Lời giải</Text.BodyIntro>
+              <PlanWrapper>
+                <iframe
+                  src="https://onedrive.live.com/embed?resid=C003F6CBB5B188F1%21542689&amp;authkey=%21AByHbCr3OHtZwnc&amp;em=2&amp;wdEmbedCode=0&amp;wdPrint=0"
+                  width="100%"
+                  height="288px"
+                  frameBorder="0"
+                ></iframe>
+              </PlanWrapper>
+              <div className="saparetor" />
+              <Text.BodyIntro>Video giải bài</Text.BodyIntro>
+              <PlanWrapper>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/3I--TN_KTsE"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullscreen
+                ></iframe>
+              </PlanWrapper>
             </AnswerPlan>
           </View.Child_2>
         </View>
@@ -118,10 +177,10 @@ const AnswerPlan = styled.div`
   background: rgba(15, 14, 71, 0.3);
   box-shadow: rgb(255 255 255 / 20%) 0px 0px 0px 0.5px inset;
   backdrop-filter: blur(40px) saturate(120%) brightness(100%);
-  -webkit-mask-box-image: linear-gradient(
+  /* -webkit-mask-box-image: linear-gradient(
     rgb(255, 255, 255) 80%,
     rgba(255, 255, 255, 0) 100%
-  );
+  ); */
   .header-title {
     display: flex;
     flex-direction: row;
@@ -143,22 +202,23 @@ const PlanWrapper = styled.div`
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(var(--width-min), 1fr));
-  /* overflow-y: auto; */
-  /* padding: 20px;
-  margin: 0 auto; */
-  /* backdrop-filter: blur(40px) saturate(120%) brightness(120%);
-  border-radius: 20px;
-  background: rgba(15, 14, 71, 0.3);
-  box-shadow: rgb(255 255 255 / 20%) 0px 0px 0px 0.5px inset;
-  backdrop-filter: blur(40px) saturate(120%) brightness(100%); */
-  justify-items: center;
 
-  /* -webkit-mask-box-image: linear-gradient(
-    rgb(255, 255, 255) 80%,
-    rgba(255, 255, 255, 0) 100%
-  ); */
-  /* ::-webkit-scrollbar {
-    display: none;
+  justify-items: center;
+`;
+
+const AnswerWrapper = styled.div`
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin: 2rem 0;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    grid-template-columns: repeat(2, 1fr);
   }
-  max-height: 34rem; */
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
