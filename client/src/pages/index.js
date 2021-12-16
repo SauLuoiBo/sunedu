@@ -27,6 +27,7 @@ export async function getStaticProps() {
 
 export default function Home({ exam }) {
   console.log(exam);
+  console.log(exam[0].fields.huhu);
   return (
     <>
       <Head>
