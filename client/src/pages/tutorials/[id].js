@@ -16,10 +16,10 @@ import {
 import { updateArray } from "../../util/updataArray";
 
 const Test = [
-  { number: "1", answer: "" },
-  { number: "2", answer: "" },
-  { number: "3", answer: "" },
-  { number: "4", answer: "" },
+  { number: "1", answer: "A" },
+  { number: "2", answer: "A" },
+  { number: "3", answer: "A" },
+  { number: "4", answer: "A" },
   { number: "5", answer: "A" },
   { number: "6", answer: "A" },
   { number: "7", answer: "A" },
@@ -73,7 +73,10 @@ const Work = () => {
                       }
                       setChoose(index);
                     }}
-                    correct={item.answer === answer}
+                    correct={item.answer === listAnswer[index]}
+                    incorrect={
+                      listAnswer[index] && item.answer !== listAnswer[index]
+                    }
                   />
                 );
               })}
@@ -106,30 +109,34 @@ const Work = () => {
                 <AnswerCard
                   answer="A"
                   choose={listAnswer[choose]}
-                  onClick={() =>
-                    updateArray("A", choose, listAnswer, setListAnswer)
-                  }
+                  onClick={() => {
+                    if (!listAnswer[choose])
+                      updateArray("A", choose, listAnswer, setListAnswer);
+                  }}
                 />
                 <AnswerCard
                   answer="B"
                   choose={listAnswer[choose]}
-                  onClick={() =>
-                    updateArray("B", choose, listAnswer, setListAnswer)
-                  }
+                  onClick={() => {
+                    if (!listAnswer[choose])
+                      updateArray("B", choose, listAnswer, setListAnswer);
+                  }}
                 />
                 <AnswerCard
                   answer="C"
                   choose={listAnswer[choose]}
-                  onClick={() =>
-                    updateArray("C", choose, listAnswer, setListAnswer)
-                  }
+                  onClick={() => {
+                    if (!listAnswer[choose])
+                      updateArray("C", choose, listAnswer, setListAnswer);
+                  }}
                 />
                 <AnswerCard
                   answer="D"
                   choose={listAnswer[choose]}
-                  onClick={() =>
-                    updateArray("D", choose, listAnswer, setListAnswer)
-                  }
+                  onClick={() => {
+                    if (!listAnswer[choose])
+                      updateArray("D", choose, listAnswer, setListAnswer);
+                  }}
                 />
               </AnswerWrapper>
 
