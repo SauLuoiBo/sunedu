@@ -92,18 +92,8 @@ const Work = () => {
                   src="https://onedrive.live.com/embed?resid=C003F6CBB5B188F1%21542689&amp;authkey=%21AByHbCr3OHtZwnc&amp;em=2&amp;wdEmbedCode=0&amp;wdPrint=0"
                   width="100%"
                   height="288px"
-                  frameborder="0"
-                >
-                  Đây là tài liệu{" "}
-                  <a target="_blank" href="https://office.com">
-                    Microsoft Office
-                  </a>{" "}
-                  được nhúng, hoạt động trên nền tảng{" "}
-                  <a target="_blank" href="https://office.com/webapps">
-                    Office
-                  </a>
-                  .
-                </iframe>
+                  frameBorder="0"
+                ></iframe>
               </PlanWrapper>
               <div className="saparetor" />
               <Text.BodyIntro>Trả lời</Text.BodyIntro>
