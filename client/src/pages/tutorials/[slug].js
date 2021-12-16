@@ -227,5 +227,6 @@ const AnswerWrapper = styled.div`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     grid-template-columns: repeat(1, 1fr);
+    justify-items: start;
   }
 `;

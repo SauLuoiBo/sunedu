@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import { createClient } from "contentful";
 
 import {
   CreateProfile,
@@ -9,7 +10,23 @@ import {
   IntroCourse,
 } from "../containers/HomePage";
 
-export default function Home() {
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  });
+
+  const res = await client.getEntries({ content_type: "exam" });
+
+  return {
+    props: {
+      exam: res.items,
+    },
+  };
+}
+
+export default function Home({ exam }) {
+  console.log(exam);
   return (
     <>
       <Head>
@@ -22,6 +39,7 @@ export default function Home() {
       <Tutorials />
       <CreateProfile />
       <IntroStories />
+      <div></div>
     </>
   );
 }
