@@ -87,19 +87,26 @@ const Work = () => {
                 </Text>
               </div> */}
 
-              <PlanWrapper>dsadsa</PlanWrapper>
-              <div className="saparetor" />
-              <div className="header-title ">
-                {/* <Text.BodyIntro>Trả lời</Text.BodyIntro> */}
+              <PlanWrapper>
                 <iframe
-                  src="https://onedrive.live.com/embed?cid=C003F6CBB5B188F1&resid=C003F6CBB5B188F1%21542689&authkey=AByHbCr3OHtZwnc&em=2"
+                  src="https://onedrive.live.com/embed?resid=C003F6CBB5B188F1%21542689&amp;authkey=%21AByHbCr3OHtZwnc&amp;em=2&amp;wdEmbedCode=0&amp;wdPrint=0"
                   width="100%"
-                  height="288"
-                  frameBorder="20"
-                  scrolling="no"
-                  style={{ bor: "red" }}
-                ></iframe>
-              </div>
+                  height="288px"
+                  frameborder="0"
+                >
+                  Đây là tài liệu{" "}
+                  <a target="_blank" href="https://office.com">
+                    Microsoft Office
+                  </a>{" "}
+                  được nhúng, hoạt động trên nền tảng{" "}
+                  <a target="_blank" href="https://office.com/webapps">
+                    Office
+                  </a>
+                  .
+                </iframe>
+              </PlanWrapper>
+              <div className="saparetor" />
+              <Text.BodyIntro>Trả lời</Text.BodyIntro>
             </AnswerPlan>
           </View.Child_2>
         </View>
@@ -146,7 +153,7 @@ const PlanWrapper = styled.div`
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(var(--width-min), 1fr));
-  overflow-y: auto;
+  /* overflow-y: auto; */
   /* padding: 20px;
   margin: 0 auto; */
   /* backdrop-filter: blur(40px) saturate(120%) brightness(120%);
@@ -156,12 +163,12 @@ const PlanWrapper = styled.div`
   backdrop-filter: blur(40px) saturate(120%) brightness(100%); */
   justify-items: center;
 
-  -webkit-mask-box-image: linear-gradient(
+  /* -webkit-mask-box-image: linear-gradient(
     rgb(255, 255, 255) 80%,
     rgba(255, 255, 255, 0) 100%
-  );
-  ::-webkit-scrollbar {
+  ); */
+  /* ::-webkit-scrollbar {
     display: none;
   }
-  max-height: 34rem;
+  max-height: 34rem; */
 `;
