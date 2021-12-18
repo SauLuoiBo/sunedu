@@ -16,7 +16,7 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const res = await client.getEntries({ content_type: "exam" });
+  const res = await client.getEntries({ content_type: "answer" });
 
   return {
     props: {
@@ -27,7 +27,7 @@ export async function getStaticProps() {
 
 export default function Home({ exam }) {
   console.log(exam);
-  console.log(exam[0].fields.huhu);
+
   return (
     <>
       <Head>
